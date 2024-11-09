@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        goos: [linux, windows, darwin]  # Linux, Windows, macOS
+        goos: [linux, darwin]  # Linux, macOS
         goarch: [amd64, arm64]          # 64-bit and ARM 64-bit arch
     steps:
       - name: Checkout code
