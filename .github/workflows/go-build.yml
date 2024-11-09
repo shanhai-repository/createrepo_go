@@ -23,4 +23,5 @@ jobs:
           goarch: ${{ matrix.goarch }}
           ldflags: -s -w
           extra_files: LICENSE README.md
+          pre_command: make generate
 

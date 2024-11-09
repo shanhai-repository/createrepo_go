@@ -4,9 +4,13 @@ GOOS:=$(shell go env GOOS)
 GOARCH:=$(shell go env GOARCH)
 
 .PHONY: version
-version:  ## Print version
+version: ## Print version
 	@echo $(VERSION)
 
+.PHONY: generate
+generate: ## Echo version to file
+	go generate
+
 .PHONY: build
-build:
+build: generate
 	GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags="-s -w" -o createrepo_go
