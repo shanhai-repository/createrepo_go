@@ -1,0 +1,26 @@
+name: Build Go binaries
+
+on:
+  push:
+    tags:
+      - 'v*'  # git tag in 'v' prefix like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        goos: [linux, windows, darwin]  # Linux, Windows, macOS
+        goarch: [amd64, arm64]          # 64-bit and ARM 64-bit arch
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - uses: wangyoucao577/go-release-action@v1.52
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
+          ldflags: -s -w
+          extra_files: LICENSE README.md
+
