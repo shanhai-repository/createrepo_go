@@ -53,3 +53,7 @@ You can build yourself if you have installed Go 1.23 locally.
 # in root folder
 [root@localhost createrepo_go]# make build
 ```
+
+## License
+
+createrepo_go is released under the MIT license. See [LICENSE](https://github.com/shanhai-repository/createrepo_go/blob/master/LICENSE).
