@@ -18,6 +18,8 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       - uses: wangyoucao577/go-release-action@v1.52
         with:
