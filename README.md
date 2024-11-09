@@ -4,7 +4,7 @@ A basic Go version of [createrepo_c](https://github.com/rpm-software-management/
 
 ## Usage
 
-You can use the Go binary to create RPM metadata repositories.
+Download the latest release artifact from [Releases](https://github.com/shanhai-repository/createrepo_go/releases) page, then use the Go binary `createrepo_go` to create RPM metadata repositories.
 
 Currently, it supports only a few flags and is not as feature-rich as [createrepo_c](https://github.com/rpm-software-management/createrepo_c).
 
